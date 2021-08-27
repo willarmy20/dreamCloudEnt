@@ -1,12 +1,25 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView, Text, ImageBackground, ScrollView} from 'react-native';
+import Post from '../components/post'
+import Story from '../components/story'
+import TlPost from '../components/tlPost'
 
 
 const Home = (props) => {
     return(
-        <SafeAreaView style={{flex:1, justifyContent: "center", alignItems: "center"}}>
-            <Text>Home Screen</Text>
+        <ScrollView>
+        <SafeAreaView style={{flex:1, justifyContent: "flex-start", alignItems: "center", borderWidth: .6}}>
+        
+           <Post />
+            <Story />
+            <TlPost />
+            
+                <Text>Home Screen</Text>        
+     
+           
+            
         </SafeAreaView>
+        </ScrollView>
     )
 }
 
