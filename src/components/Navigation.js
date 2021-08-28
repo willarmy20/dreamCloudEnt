@@ -8,6 +8,7 @@ import Home from '../screens/Home'
 import Templates from '../screens/Templates'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Text, View , ImageBackground} from 'react-native';
+import Login from '../screens/Login';
 
 
 

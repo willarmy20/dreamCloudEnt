@@ -1,12 +1,15 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Navigation from './src/components/Navigation';
+import Login from './src/screens/Login';
+
 
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Navigation />
+      <Login />
+      {/* <Navigation /> */}
     </View>
   );
 };
