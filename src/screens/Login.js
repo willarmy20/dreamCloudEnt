@@ -1,8 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image, Button } from 'react-native';
 
-export default class  Login  extends React.Component{
-    render() {
+const Login = props => {
         return (
             <View style={styles.container}>
                 <Image style={styles.dcimg} source={require('../assets/DCLogo.png')} />
@@ -23,16 +22,19 @@ export default class  Login  extends React.Component{
                         <TextInput style={styles.input} secureTextEntry autoCapitalize="none"></TextInput>
                     </View>
 
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={{color:"#FFF", fontWeight:"500"}}>Sign in</Text>
-
-                    </TouchableOpacity>
-
+                    <Button onPress={() => {
+                            props.navigation.navigate({routeName: 'Home'}) 
+                    }}
+                    style={styles.button}
+                    title="Sign In"
+                    >
+                              
+                    </Button>
                 </View>
             </View>
         )
     }
-}
+
 
 const styles = StyleSheet.create({
     container:{
@@ -89,3 +91,5 @@ const styles = StyleSheet.create({
     }
 
 })
+
+export default Login;
